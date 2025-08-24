@@ -12,7 +12,7 @@ async function getWeather() {
 
   try {
     const apiKey = "43666b428e8d475dbd1103506252408"; // Your API key
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
     
     const response = await fetch(url);
     if (!response.ok) throw new Error("City not found");
@@ -56,3 +56,4 @@ function toggleUnit() {
   const btn = document.querySelector(".toggle-btn");
   btn.textContent = isCelsius ? "Show in °F" : "Show in °C";
 }
+
